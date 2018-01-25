@@ -1,0 +1,168 @@
+Escriu comandes per controlar la classe Game:
+CREATEGAME , SETIASOLUTION , SETHUMANCOMB , INSERTCOMB , AIPLAY , HUMANPLAY , COMPARECOMB , GETHEIGHT , ISVICTORIOUS , ISFINISHED
+
+SETIASOLUTIONÇ
+input: SETIASOLUTIONÇ
+Entrada incorrecta
+
+SETIASOLUTION
+input: SETIASOLUTION
+Game no esta creat encara
+
+ISVICTORIUS
+input: ISVICTORIUS
+Entrada incorrecta
+
+AIPLAY
+input: AIPLAY
+Game no esta creat encara
+
+CREATEGAME
+input: CREATEGAME
+Introdueix numero de boles, files, nombre de colors i si l'huma esta jugant(true/false)
+4 6 6 true
+Game creat!
+
+SETHUMANCOMB
+input: SETHUMANCOMB
+Introdueix solucio (numeros sense espais)
+1234
+Solucio posada
+
+GETHEIGHT
+input: GETHEIGHT
+Height = 0
+
+ISFINISHED
+input: ISFINISHED
+false
+
+ISVICTORIOUS
+input: ISVICTORIOUS
+false
+
+HUMANPLAY
+input: HUMANPLAY
+Introdueix guess (numeros sense espais)
+2345
+Guess feta
+
+COMPARECOMB
+input: COMPARECOMB
+Blanques: 0 Negres:3
+Combinacio comparada
+
+SETIASOLUTION
+input: SETIASOLUTION
+2532
+Solució posada
+
+HUMANPLAY
+input: HUMANPLAY
+Introdueix guess (numeros sense espais)
+2631
+Guess feta
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+GETHEIGHT
+input: GETHEIGHT
+Height = 2
+
+AIPLAY
+input: AIPLAY
+Guess de la IA: 0011
+
+COMPARECOMB
+input: COMPARECOMB
+Blanques: 0 Negres:0
+Combinacio comparada
+
+ISFINISHED
+input: ISFINISHED
+false
+
+GETH
+input: GETH
+Entrada incorrecta
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+GETHEIGHT
+input: GETHEIGHT
+Height = 4
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+ GETHEIGHT
+input: GETHEIGHT
+Height = 5
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+GETHEIGHT
+input: GETHEIGHT
+Height = 6
+
+COMPARECOMB
+input: COMPARECOMB
+Posicio de la combinacio fora del taulell
+
+INSERTCOMB
+input: INSERTCOMB
+El taulell ja esta ple
+
+ISFINISHED
+input: ISFINISHED
+false
+
+AIPLAY
+input: AIPLAY
+Guess de la IA: 5554
+
+HUMANPLAY
+input: HUMANPLAY
+Introdueix guess (numeros sense espais)
+4321
+Guess feta
+
+CREATEGAME
+input: CREATEGAME
+Introdueix numero de boles, files, nombre de colors i si l'huma esta jugant(true/false)
+3
+2
+4
+false
+Game creat!
+
+GETHEIGHT
+input: GETHEIGHT
+Height = 0
+
+INSERTCOMB
+input: INSERTCOMB
+Combinacio insertada
+
+ISVICTORIOUS
+input: ISVICTORIOUS
+false
+
+EXIT
+
+Process finished with exit code 0

@@ -1,0 +1,27 @@
+CREATEBALL
+GETBALLCOLOR
+2
+CREATECOMBINATION
+4 7
+SETRANDOMCOMBINATION
+GETCOMBVALUE
+SETCOMBINATION
+0001
+CHANGECOMBINATIONBALLCOLOR
+1 3
+GETCOMBVALUE
+SETRANDOMCOMBINATION
+GETCOMBVALUE
+
+
+Ball creada!
+Color = 0
+Bad entry
+Combinacio creada
+Combinacio de boles creada aleatoriament
+1512
+Combinacio posada
+Canvi fet
+0301
+Combinacio de boles creada aleatoriament
+0565

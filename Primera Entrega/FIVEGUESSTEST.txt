@@ -1,0 +1,15 @@
+GETCOMB
+CREATEFIVEGUESS
+4 6
+GETCOMB
+CALCULATENEWGUESS
+GETCOMB
+
+
+
+Fiveguess no esta creat encara
+Fiveguess creat
+Comb = 0011
+5554
+Comb = 5554
+

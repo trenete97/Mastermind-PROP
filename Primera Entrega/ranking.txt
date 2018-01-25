@@ -1,0 +1,11 @@
+PLAYER | MIN.GUESSES | DIFF
+EEEE | 1 | 0
+ASSSC | 1 | 0
+ADAS | 1 | 0
+POL | 2 | 1
+AAA | 2 | 2
+AAA | 2 | 2
+AAA | 2 | 2
+ASAS | 6 | 0
+A | 11 | 0
+J | 11 | 0

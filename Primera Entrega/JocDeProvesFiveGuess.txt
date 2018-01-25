@@ -1,0 +1,76 @@
+Escriu comandes per controlar la classe FiveGuess:
+GETCOMB , CREATEFIVEGUESS , CALCULATENEWGUESS
+
+GETCOMB
+input: GETCOMB
+Fiveguess no esta creat encara
+
+CREATEFIVEGUESS
+input: CREATEFIVEGUESS
+Escriu nombre de files i de colors
+4
+6
+Fiveguess creat
+
+GETCOMB
+input: GETCOMB
+Comb = 0011
+
+GETCOMB
+input: GETCOMB
+Comb = 0011
+
+CALCULATENEWGUESS
+input: CALCULATENEWGUESS
+5554
+
+CALCULATENEWGUESS
+input: CALCULATENEWGUESS
+No pots calcular seguent guess dos vegades
+
+CALCULATENEWGUESS
+input: CALCULATENEWGUESS
+No pots calcular seguent guess dos vegades
+
+GETCOMB
+input: GETCOMB
+Comb = 5554
+
+GETCOMB
+input: GETCOMB
+Comb = 5554
+
+FRDSDGSDV
+input: FRDSDGSDV
+Entrada no valida
+
+CALCULATENEWGUESS
+input: CALCULATENEWGUESS
+No pots calcular seguent guess dos vegades
+
+CREATEFIVEGUESS
+input: CREATEFIVEGUESS
+Escriu nombre de files i de colors
+3
+4
+Fiveguess creat
+
+GETCOMB
+input: GETCOMB
+Comb = 001
+
+CALCULATENEWGUESS
+input: CALCULATENEWGUESS
+332
+
+CALCULATENEWGUESS
+input: CALCULATENEWGUESS
+No pots calcular seguent guess dos vegades
+
+GETCOMB
+input: GETCOMB
+Comb = 332
+
+EXIT
+
+Process finished with exit code 0

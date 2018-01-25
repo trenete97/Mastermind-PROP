@@ -1,0 +1,97 @@
+Escriu comandes per controlar la classe Ball i BallCombination:
+CREATEBALL , CHANGEBALLCOLOR , GETBALLCOLOR
+CREATECOMBINATION , CHANGECOMBINATIONBALLCOLOR , GETCOMBINATIONBALLCOLOR , GETCOMBVALUE , SETRANDOMCOMBINATION , SETCOMBINATION
+
+CHANGEBALLCOLOR
+input: CHANGEBALLCOLOR
+No s'ha creat la bola encara
+
+RWGRFSD
+Bad entry
+
+CREATEBALL
+Ball creada!
+
+GETBALLCOLOR
+Color = 0
+
+CHANGEBALLCOLOR
+Introdueix color (integer)
+2
+Color canviat
+
+GETBALLCOLOR
+Color = 2
+
+GETBALLCOLOR
+Color = 2
+
+CHANGEBALLCOLOR
+Introdueix color (integer)
+1
+Color canviat
+
+GETBALLCOLOR
+Color = 1
+
+CREATEBALL
+Ball creada!
+
+GETBALLCOLOR
+Color = 0
+
+CHANGECOMBINATIONBALLCOLOR
+No s'ha creat la combinacio de boles encara
+
+GETCOMBINATIONBALLCOLOR
+No s'ha creat la combinacio de boles encara
+
+CREATECOMBINATION
+Introdueix numero de boles i colors (integer)
+4
+6
+Combinacio creada
+
+GETCOMBVALUE
+0000
+
+SETRANDOMCOMBINATION
+Combinacio de boles creada aleatoriament
+
+GETCOMBVALUE
+3441
+
+GETCOMBVALUE
+3441
+
+SETCOMBINATION
+Introdueix combinacio de colors (integers tot junts)
+1234
+Combinacio posada
+
+GETCOMBVALUE
+1234
+
+CHANGECOMBINATIONBALLCOLOR
+Introdueix posicio de bola (integer)
+Introdueix numero de color (integer)
+3
+1
+Canvi fet
+
+GETCOMBVALUE
+1231
+
+GETCOMBINATIONBALLCOLOR
+Introdueix posicio de bola (integer)
+2
+3
+
+GETCOMBINATIONBALLCOLOR 
+Introdueix posicio de bola (integer)
+0
+1
+
+EXIT
+
+Process finished with exit code 0

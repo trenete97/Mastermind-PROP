@@ -1,0 +1,74 @@
+Escriu comandes per controlar la classe AI:
+CREATEAI , PLAY , GETSOLUTION
+
+PLAY
+input: PLAY
+AI no esta creat encara
+
+CREATEAI
+input: CREATEAI
+Introdueix numero files i de colors
+4
+6
+AI creat!
+
+GETSOLUTION
+input: GETSOLUTION
+2153
+2153
+
+GETSOLUTION
+input: GETSOLUTION
+1144
+1144
+
+GETSOLUTION
+input: GETSOLUTION
+4200
+4200
+
+PLAY
+input: PLAY
+0011
+
+GETSOLUTION
+input: GETSOLUTION
+4343
+4343
+
+PLAY
+input: PLAY
+Ja has jugat abans
+
+RGER
+input: RGER
+Entrada incorrecta
+
+CREATEAI
+input: CREATEAI
+Introdueix numero files i de colors
+3
+5
+AI creat!
+
+GETSOLUTION
+input: GETSOLUTION
+431
+431
+
+PLAY
+input: PLAY
+001
+
+PLAY
+input: PLAY
+Ja has jugat abans
+
+GETSOLUTION
+input: GETSOLUTION
+324
+324
+
+EXIT
+
+Process finished with exit code 0

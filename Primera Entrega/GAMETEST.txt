@@ -1,0 +1,37 @@
+CREATEGAME
+4 10 6 true
+SETIASOLUTION
+HUMANPLAY
+1111
+COMPARECOMB
+INSERTCOMB
+GETHEIGHT
+ISVICTORIOUS
+ISFINISHED
+HUMANPLAY
+4123
+COMPARECOMB
+INSERTCOMB
+HUMANPLAY
+4012
+COMPARECOMB
+INSERTCOMB
+
+
+Game creat!
+Solució posada
+Guess feta
+Blanques: 1 Negres:0
+Combinacio comparada
+Combinacio insertada
+Height = 1
+false
+false
+Introdueix guess (numeros sense espais)
+Guess feta
+Blanques: 2 Negres:0
+Combinacio comparada
+Combinacio insertada
+Guess feta
+Blanques: 1 Negres:2
+Combinacio comparada
