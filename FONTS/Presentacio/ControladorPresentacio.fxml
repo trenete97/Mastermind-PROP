@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentacio.ControladorPresentacio">
+    <children>
+        <BorderPane fx:id="fPlay" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+            <left>
+                <VBox prefHeight="400.0" prefWidth="144.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox minWidth="-Infinity" prefHeight="10.0" prefWidth="200.0">
+                            <children>
+                                <Label text="You:">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                                <Label fx:id="player1Score" text="0">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox minWidth="-Infinity" prefHeight="10.0" prefWidth="200.0">
+                            <children>
+                                <Label text="IA:">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                                <Label fx:id="player2Score" text="0">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <VBox prefHeight="62.0" prefWidth="123.0">
+                            <VBox.margin>
+                                <Insets left="20.0" top="20.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="20.0" />
+                            </padding>
+                     <children>
+                                <Label alignment="CENTER" prefHeight="42.0" prefWidth="53.0" text="Colors:">
+                                    <padding>
+                                        <Insets top="10.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Century Gothic" size="12.0" />
+                                    </font>
+                                </Label>
+                              <GridPane fx:id="colors" gridLinesVisible="false" prefHeight="0.0" prefWidth="200.0" />
+                     </children>
+                        </VBox>
+                  <VBox prefHeight="67.0" prefWidth="200.0" />
+                  <HBox prefHeight="44.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="44.0" prefWidth="25.0" />
+                        <Button fx:id="optionsbutton" mnemonicParsing="false" onAction="#options" prefHeight="25.0" prefWidth="100.0" text="OPTIONS" />
+                     </children>
+                  </HBox>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </VBox>
+            </left>
+            <center>
+                <GridPane fx:id="board" BorderPane.alignment="CENTER" />
+            </center>
+         <bottom>
+            <HBox minWidth="-Infinity" prefHeight="108.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="213.0" />
+                  <VBox prefHeight="108.0" prefWidth="413.0">
+                     <children>
+                        <Button fx:id="checkbutton" mnemonicParsing="false" onAction="#check" prefHeight="25.0" prefWidth="100.0" text="CHECK" />
+                        <Label fx:id="checkInvalid" alignment="CENTER" prefHeight="17.0" prefWidth="388.0" />
+                     </children>
+                  </VBox>
+               </children></HBox>
+         </bottom>
+        </BorderPane>
+        <ImageView fx:id="ImatgeMastermind" fitHeight="90.0" fitWidth="610.0" pickOnBounds="true">
+            <image>
+                <Image url="@../descarga.jpg" />
+            </image>
+        </ImageView>
+        <Pane fx:id="fRanking" prefHeight="400.0" prefWidth="600.0" visible="false">
+            <ListView fx:id="rankingList" layoutX="177.0" layoutY="36.0" prefHeight="271.0" prefWidth="247.0" />
+         <ButtonBar layoutX="250.0" layoutY="319.0" prefHeight="40.0" prefWidth="100.0">
+            <buttons>
+               <Button fx:id="back3button" mnemonicParsing="false" onAction="#back3" prefHeight="25.0" prefWidth="146.0" text="GO BACK" />
+            </buttons>
+         </ButtonBar>
+        </Pane>
+        <Pane fx:id="fPlayset" prefHeight="400.0" prefWidth="600.0" visible="false">
+            <children>
+                <ButtonBar layoutX="416.0" layoutY="143.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="playbutton" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="90.0" text="PLAY" />
+                    </buttons>
+                </ButtonBar>
+                <ChoiceBox fx:id="nGames" layoutX="36.0" layoutY="151.0" prefWidth="150.0" value="1">
+                    <items> <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1" />
+                        <String fx:value="3" />
+                        <String fx:value="5" />
+                        <String fx:value="7" />
+                        <String fx:value="9" />
+                    </FXCollections></items></ChoiceBox>
+                <ChoiceBox fx:id="difficulty" layoutX="225.0" layoutY="151.0" prefWidth="150.0" value="RETARDED">
+                    <items> <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="RETARDED" />
+                        <String fx:value="AMATEUR" />
+                        <String fx:value="KOREAN" />
+                        <String fx:value="CUSTOM" />
+                    </FXCollections></items></ChoiceBox>
+                <Label layoutX="63.0" layoutY="126.0" text="Number of games" />
+            <ChoiceBox fx:id="nColors" layoutX="396.0" layoutY="230.0" prefHeight="25.0" prefWidth="120.0" value="6" visible="false">
+                <items> <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="3" />
+                    <String fx:value="4" />
+                    <String fx:value="5" />
+                    <String fx:value="6" />
+                    <String fx:value="7" />
+                    <String fx:value="8" />
+                </FXCollections></items></ChoiceBox>
+                <Label layoutX="277.0" layoutY="126.0" text="Difficulty" />
+                <ButtonBar layoutX="250.0" layoutY="300.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="back1button" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="146.0" text="GO BACK" />
+                    </buttons>
+                </ButtonBar>
+            <ChoiceBox fx:id="nRows" layoutX="36.0" layoutY="230.0" prefHeight="25.0" prefWidth="120.0" value="10" visible="false">
+                <items> <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="6" />
+                    <String fx:value="7" />
+                    <String fx:value="8" />
+                    <String fx:value="9" />
+                    <String fx:value="10" />
+                    <String fx:value="11" />
+                </FXCollections></items></ChoiceBox>
+            <ChoiceBox fx:id="nColumns" layoutX="216.0" layoutY="230.0" prefHeight="25.0" prefWidth="120.0" value="4" visible="false">
+                <items> <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="3" />
+                    <String fx:value="4" />
+                    <String fx:value="5" />
+                    <String fx:value="6" />
+                </FXCollections></items></ChoiceBox>
+            <Label fx:id="textNrows" layoutX="53.0" layoutY="206.0" text="Number of rows" visible="false" />
+            <Label fx:id="textNcolumns" layoutX="223.0" layoutY="206.0" text="Number of columns" visible="false" />
+            <Label fx:id="textNcolors" layoutX="408.0" layoutY="206.0" text="Number of colors" visible="false" />
+            </children></Pane>
+        <Pane fx:id="fPrincipal" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <ButtonBar layoutX="251.0" layoutY="324.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="exitbut" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="100.0" text="EXIT" />
+                    </buttons>
+                </ButtonBar>
+                <ButtonBar layoutX="251.0" layoutY="164.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="loadgamebut" minWidth="0.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="25.0" prefWidth="100.0" text="LOAD GAME" />
+                    </buttons>
+                </ButtonBar>
+                <ButtonBar layoutX="250.0" layoutY="244.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="rankingbut" mnemonicParsing="false" onAction="#ranking" prefHeight="25.0" prefWidth="100.0" text="RANKING" />
+                    </buttons>
+                </ButtonBar>
+                <ButtonBar layoutX="251.0" layoutY="124.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="playsetbut" mnemonicParsing="false" onAction="#playset" prefHeight="25.0" prefWidth="100.0" text="PLAYSET" />
+                    </buttons>
+                </ButtonBar>
+                <ButtonBar layoutX="251.0" layoutY="284.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="helpbut" mnemonicParsing="false" onAction="#help" prefHeight="25.0" prefWidth="100.0" text="HELP" />
+                    </buttons>
+                </ButtonBar>
+            <ButtonBar layoutX="251.0" layoutY="204.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="testbut" minWidth="0.0" mnemonicParsing="false" onAction="#testAlgorithms" prefHeight="25.0" prefWidth="100.0" text="FG vs Genetic" />
+               </buttons>
+            </ButtonBar>
+            </children>
+        </Pane>
+        <Pane fx:id="fHelp" prefHeight="400.0" prefWidth="600.0" visible="false">
+            <children>
+                <ButtonBar layoutX="250.0" layoutY="335.0" prefHeight="40.0" prefWidth="100.0">
+                    <buttons>
+                        <Button fx:id="back2button" mnemonicParsing="false" onAction="#back2" prefHeight="25.0" prefWidth="100.0" text="GO BACK" />
+                    </buttons>
+                </ButtonBar>
+            <TextArea layoutX="33.0" layoutY="20.0" prefHeight="315.0" prefWidth="535.0" text="Mastermind is an abstract game type board game, where you have to use your deduction skill &#10;to find out a color-composed code.&#10;&#10;A player secretly places a combination of colors (they can be repeated and put in any order) &#10;and the opponent must find out in a limited number of turns. Every turn, the player who tries &#10;to guess the solution places a combination of colors and the other responds indicating with &#10;white and black pins depending on the set combination.&#10;&#10;For each ball of the combination of the user's who wants to find out the combination, the user &#10;with the secret combination (solution) will respond in the following way: If the color is in the &#10;solution but in another position, it will put a black pin for each ball in this case; If it has been &#10;correct position and color will put a white pin; If there is no correct color in the solution, no &#10;pin will be placed.&#10;&#10;Each player plays a round in each role and the round wins who guesses in less attemps the &#10;solution. If there’s a tie, the round is repeated. The winner is the first who wins half of the total &#10;games plus one (If there are 5 rounds, the game will end when a player win 3 rounds).&#10;" />
+            </children></Pane>
+      <Pane fx:id="fOptions" layoutX="129.0" layoutY="60.0" prefHeight="281.0" prefWidth="343.0" visible="false">
+         <children>
+            <ButtonBar layoutX="122.0" layoutY="94.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="endgamebut1" minWidth="0.0" mnemonicParsing="false" onAction="#endGame" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black;" text="END GAME" />
+               </buttons>
+            </ButtonBar>
+            <ButtonBar layoutX="122.0" layoutY="187.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="exitgamebut" minWidth="0.0" mnemonicParsing="false" onAction="#exitGame" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black;" text="EXIT" />
+               </buttons>
+            </ButtonBar>
+            <ButtonBar layoutX="122.0" layoutY="141.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="savegamebut" minWidth="0.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black;" text="SAVE GAME" />
+               </buttons>
+            </ButtonBar>
+            <ButtonBar layoutX="122.0" layoutY="47.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="gobackgamebut" minWidth="0.0" mnemonicParsing="false" onAction="#backGame" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black;" text="GO BACK">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Button>
+               </buttons>
+            </ButtonBar>
+         </children></Pane>
+      <Pane fx:id="fTest" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <ButtonBar layoutX="416.0" layoutY="143.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="playTestbutton" mnemonicParsing="false" onAction="#playTest" prefHeight="25.0" prefWidth="90.0" text="PLAY" />
+               </buttons>
+            </ButtonBar>
+            <ChoiceBox fx:id="nGamesTest" layoutX="36.0" layoutY="151.0" prefWidth="150.0" value="1">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="1" />
+                     <String fx:value="3" />
+                     <String fx:value="5" />
+                     <String fx:value="7" />
+                     <String fx:value="9" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="difficultyTest" layoutX="225.0" layoutY="151.0" prefWidth="150.0" value="RETARDED">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="RETARDED" />
+                     <String fx:value="AMATEUR" />
+                     <String fx:value="KOREAN" />
+                     <String fx:value="CUSTOM" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Label layoutX="63.0" layoutY="126.0" text="Number of games" />
+            <ChoiceBox fx:id="nColorsTest" layoutX="396.0" layoutY="230.0" prefHeight="25.0" prefWidth="120.0" value="6" visible="false">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="3" />
+                     <String fx:value="4" />
+                     <String fx:value="5" />
+                     <String fx:value="6" />
+                     <String fx:value="7" />
+                     <String fx:value="8" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Label layoutX="277.0" layoutY="126.0" text="Difficulty" />
+            <ButtonBar layoutX="250.0" layoutY="300.0" prefHeight="40.0" prefWidth="100.0">
+               <buttons>
+                  <Button fx:id="backTestbutton" mnemonicParsing="false" onAction="#backTest" prefHeight="25.0" prefWidth="146.0" text="GO BACK" />
+               </buttons>
+            </ButtonBar>
+            <ChoiceBox fx:id="nRowsTest" layoutX="36.0" layoutY="230.0" prefHeight="25.0" prefWidth="120.0" value="10" visible="false">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="6" />
+                     <String fx:value="7" />
+                     <String fx:value="8" />
+                     <String fx:value="9" />
+                     <String fx:value="10" />
+                     <String fx:value="11" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="nColumnsTest" layoutX="216.0" layoutY="230.0" prefHeight="25.0" prefWidth="120.0" value="4" visible="false">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="3" />
+                     <String fx:value="4" />
+                     <String fx:value="5" />
+                     <String fx:value="6" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Label fx:id="textNrowsTest" layoutX="53.0" layoutY="206.0" text="Number of rows" visible="false" />
+            <Label fx:id="textNcolumnsTest" layoutX="223.0" layoutY="206.0" text="Number of columns" visible="false" />
+            <Label fx:id="textNcolorsTest" layoutX="408.0" layoutY="206.0" text="Number of colors" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="fGameTest" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <ButtonBar layoutX="150.0" layoutY="250.0" prefHeight="40.0" prefWidth="130.0">
+               <buttons>
+                  <Button fx:id="TestAgainbutton" mnemonicParsing="false" onAction="#testAgain" prefHeight="25.0" prefWidth="146.0" text="TEST AGAIN" />
+               </buttons>
+            </ButtonBar>
+            <ButtonBar layoutX="320.0" layoutY="250.0" prefHeight="40.0" prefWidth="130.0">
+               <buttons>
+                  <Button fx:id="backPrincTestbut" mnemonicParsing="false" onAction="#backPrincTest" prefHeight="25.0" prefWidth="146.0" text="MAIN MENU" />
+               </buttons>
+            </ButtonBar>
+            <Label layoutX="263.0" layoutY="63.0" text="Results:">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Label layoutX="167.0" layoutY="128.0" text="FiveGuess">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="348.0" layoutY="128.0" text="Genetic">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="fiveGuessScore" alignment="CENTER" layoutX="167.0" layoutY="168.0" prefHeight="32.0" prefWidth="96.0" text="0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="geneticScore" alignment="CENTER" layoutX="337.0" layoutY="168.0" prefHeight="32.0" prefWidth="96.0" text="0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</Pane>
